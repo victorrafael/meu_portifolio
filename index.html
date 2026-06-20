@@ -18,10 +18,10 @@
         </button>
         <nav id="navMenu">
             <a href="#home">Início</a>
-            <a href="#projetos">Projetos</a>
+            <a href="#projetos">Projetos BI</a>
+            <a href="#automacao">Automação & IA</a>
             <a href="#experiencia">Experiência</a>
             <a href="#formacao">Formação</a>
-            <a href="#competencias">Competências</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
@@ -52,10 +52,10 @@
     </section>
 
     <section id="projetos">
-        <h2 class="section-title">Meus Projetos</h2>
+        <h2 class="section-title">Projetos de Business Intelligence</h2>
         
         <div class="projects-list">
-            <div class="card">
+            <div class="card horizontal-card">
                 <div class="card-img-wrapper">
                     <img src="painel_1.PNG" alt="Vendas por Região e Período" class="card-img">
                 </div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card horizontal-card">
                 <div class="card-img-wrapper">
                     <img src="painel_2.PNG" alt="Relatório Visão Geral Financeira" class="card-img">
                 </div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card horizontal-card">
                 <div class="card-img-wrapper">
                     <img src="painel_3.PNG" alt="Relatório Visão Geral Marketing" class="card-img">
                 </div>
@@ -88,6 +88,48 @@
                     <h3>Visão Geral Marketing</h3>
                     <p>Análise detalhada de performance de campanhas pagas e orgânicas, medindo a relação Custo x Receita ao longo do tempo, métricas de ROAS, volume de leads qualificados e custo por clique (CPC).</p>
                     <a href="#" target="_blank" class="card-link">Visualizar Painel <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="automacao">
+        <h2 class="section-title">Automação & Engenharia de Dados</h2>
+        
+        <div class="cards-grid">
+            <div class="card vertical-card">
+                <div class="card-img-wrapper">
+                    <img src="images/rag_project.PNG" alt="Sistema RAG em Python" class="card-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag ai-tag">Artificial Intelligence</span>
+                    <h3>Sistemas RAG em Python</h3>
+                    <p>Desenvolvimento de arquiteturas de Geração Aumentada de Recuperação (RAG) para leitura analítica, consulta inteligente e extração automatizada de insights em documentações complexas.</p>
+                    <a href="#" target="_blank" class="card-link">Ver Código <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="card vertical-card">
+                <div class="card-img-wrapper">
+                    <img src="images/pentaho_project.PNG" alt="Pipelines de ETL no Pentaho" class="card-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag etl-tag">Data Engineering</span>
+                    <h3>Engenharia de Dados com Pentaho</h3>
+                    <p>Modelagem e execução de pipelines de dados estruturados (Extração, Transformação e Carga) integrando múltiplas fontes descentralizadas para bancos relacionais SQL.</p>
+                    <a href="#" target="_blank" class="card-link">Ver Repositório <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="card vertical-card">
+                <div class="card-img-wrapper">
+                    <img src="images/n8n_project.PNG" alt="Fluxos no n8n" class="card-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag automation-tag">Automation</span>
+                    <h3>Workflows Inteligentes no n8n</h3>
+                    <p>Construção de fluxos de trabalho assíncronos e integração ponta a ponta de APIs corporativas para eliminação de gargalos operacionais e automação de rotas manuais.</p>
+                    <a href="#" target="_blank" class="card-link">Ver Workflows <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -156,223 +198,6 @@
                         <p>Coursera / Google | Set 2023</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="competencias">
-        <h2 class="section-title">Outras Competências</h2>
-        <div class="competencias-list">
-            <div class="competencia-item">
-                <h3>Automação de Processos com <span>n8n</span></h3>
-                <p>Construção de fluxos de trabalho inteligentes e integração de APIs corporativas para eliminar tarefas manuais e otimizar o tempo operacional.</p>
-            </div>
-            <div class="competencia-item">
-                <h3>Sistemas de Inteligência Artificial e <span>RAG</span></h3>
-                <p>Desenvolvimento de arquiteturas de Geração Aumentada de Recuperação (RAG) para leitura analítica, consulta e extração de insights de documentações complexas.</p>
-            </div>
-            <div class="competencia-item">
-                <h3>Engenharia de Dados e ETL com <span>Pentaho</span></h3>
-                <p>Modelagem e execução de pipelines de dados robustos (Extração, Transformação e Carga) integrando múltiplas fontes para armazéns SQL.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <h2 class="section-title">Contato</h2>
-        <div class="contact-container">
-            <h3>Vamos construir algo inteligente juntos?</h3>
-            <p style="color: var(--text-muted); margin-top: 0.5rem;">Sinta-se à vontade para se conectar em qualquer uma das plataformas abaixo.</p>
-            
-            <div class="social-grid">
-                <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="social-card linkedin">
-                    <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-                </a>
-                <a href="https://wa.me/5585994100604" target="_blank" class="social-card whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="mailto:rvictor181@gmail.com" class="social-card email">
-                    <i class="fa-solid fa-envelope"></i> E-mail
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; Portfólio de Análise de Dados. Desenvolvido por Victor Rafael <i class="fa-solid fa-code" style="color: var(--primary);"></i></p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio - Victor Rafael</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="bg-glow"></div>
-
-    <header>
-        <div class="logo">VICTOR RAFAEL</div>
-        <nav>
-            <a href="#home">Início</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#experiencia">Experiências</a>
-            <a href="#formacao">Formações</a>
-            <a href="#competencias">Competências</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <h1>Análise de Dados</h1>
-        <p>Desenvolvimento de dashboards inteligentes, pipelines de dados robustos e soluções automatizadas para otimização de processos corporativos.</p>
-        
-        <div class="skills-container">
-            <div class="skills-group primary-skills">
-                <span class="skill-badge"><i class="fa-solid fa-chart-bar"></i> Power BI</span>
-                <span class="skill-badge"><i class="fa-solid fa-filter"></i> DAX & Power Query</span>
-                <span class="skill-badge"><i class="fa-solid fa-database"></i> SQL Avançado</span>
-                <span class="skill-badge"><i class="fa-brands fa-python"></i> Python para Dados</span>
-            </div>
-            <div class="skills-group secondary-skills">
-                <span class="skill-badge"><i class="fa-solid fa-diagram-project"></i> n8n Automation</span>
-                <span class="skill-badge"><i class="fa-solid fa-brain"></i> RAG Systems</span>
-                <span class="skill-badge"><i class="fa-solid fa-gears"></i> ETL Pentaho</span>
-                <span class="skill-badge"><i class="fa-solid fa-file-excel"></i> Excel Avançado</span>
-                <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> Modelagem de Dados</span>
-                <span class="skill-badge"><i class="fa-solid fa-chart-line"></i> KPIs / Indicadores</span>
-            </div>
-        </div>
-
-        <a href="#projetos" class="btn">Explorar Projetos</a>
-    </section>
-
-    <section id="projetos">
-        <h2 class="section-title">Meus Projetos</h2>
-        
-        <div class="projects-list">
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="painel_1.PNG" alt="Vendas por Região e Período" class="card-img">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">BI & Analytics</span>
-                    <h3>Vendas por Região e Período</h3>
-                    <p>Análise interativa de indicadores comerciais englobando faturamento total, evolução anual e distribuição geográfica por estados e municípios através de árvore de decomposição inteligente.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="painel_2.PNG" alt="Relatório Visão Geral Financeira" class="card-img">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">BI & Analytics</span>
-                    <h3>Visão Geral Financeira</h3>
-                    <p>Painel consolidado focado no balancete corporativo. Permite o rastreio rigoroso de créditos, débitos, contagem de lançamentos e distribuição analítica por plano de contas e filiais.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="painel_3.PNG" alt="Relatório Visão Geral Marketing" class="card-img">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">BI & Analytics</span>
-                    <h3>Visão Geral Marketing</h3>
-                    <p>Análise detalhada de performance de campanhas pagas e orgânicas, medindo a relação Custo x Receita ao longo do tempo, métricas de ROAS, volume de leads qualificados e custo por clique (CPC).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia">
-        <h2 class="section-title">Experiências Profissionais</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <h3>Assistente Comercial</h3>
-                    <span class="timeline-date">Dez 2024 - Jun 2026</span>
-                </div>
-                <h4 class="timeline-company">CM Máquinas - Grupo Cordeiro</h4>
-                <p class="timeline-text">Desenvolvimento e manutenção de dashboards analíticos em Power BI focados em KPIs comerciais e monitoramento de funil de vendas em tempo real. Identificação de padrões ocultos em processos de negócios e estruturação de soluções assistidas por IA para qualificação automatizada de bases de leads.</p>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <h3>Assistente Comercial</h3>
-                    <span class="timeline-date">Abr 2024 - Jul 2024</span>
-                </div>
-                <h4 class="timeline-company">Assaí Atacadista</h4>
-                <p class="timeline-text">Manipulação e modelagem de grandes volumes de dados estruturados voltados para auditoria interna e logística regional (CE, PI e MA). Automação de pipelines de relatórios operacionais gerenciais.</p>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <h3>Apontador de Produção</h3>
-                    <span class="timeline-date">Mar 2023 - Abr 2024</span>
-                </div>
-                <h4 class="timeline-company">Sucré Alimentos</h4>
-                <p class="timeline-text">Extração e análise analítica de ordens de produção mensais via banco ERP SAP Business One. Estruturação de ambiente de monitoramento unificado e desenvolvimento de relatórios interativos integrando dados complexos das cadeias de Supply Chain e controle estatístico de qualidade.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="formacao">
-        <h2 class="section-title">Formação & Certificações</h2>
-        <div class="education-grid">
-            <div class="education-block">
-                <h3><i class="fa-solid fa-graduation-cap"></i> Acadêmica</h3>
-                <div class="edu-item">
-                    <h4>Análise e Desenvolvimento de Sistemas</h4>
-                    <p class="edu-institution">Universidade Descomplica</p>
-                    <p class="edu-meta">Tecnólogo | 2024 - 2026</p>
-                </div>
-            </div>
-            <div class="education-block">
-                <h3><i class="fa-solid fa-award"></i> Extracurriculares</h3>
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <h4>Formação em Análise de Dados</h4>
-                        <p>Digital College Fortaleza | Jun 2026</p>
-                    </div>
-                    <div class="cert-item">
-                        <h4>Especialista em IA Generativa</h4>
-                        <p>Digital College Fortaleza | Dez 2025</p>
-                    </div>
-                    <div class="cert-item">
-                        <h4>Google Project Management Certificate</h4>
-                        <p>Coursera / Google | Nov 2024</p>
-                    </div>
-                    <div class="cert-item">
-                        <h4>Google Data Analytics Professional Certificate</h4>
-                        <p>Coursera / Google | Set 2023</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="competencias">
-        <h2 class="section-title">Outras Competências</h2>
-        <div class="competencias-list">
-            <div class="competencia-item">
-                <h3>Automação de Processos com <span>n8n</span></h3>
-                <p>Construção de fluxos de trabalho inteligentes e integração de APIs corporativas para eliminar tarefas manuais e otimizar o tempo operacional.</p>
-            </div>
-            <div class="competencia-item">
-                <h3>Sistemas de Inteligência Artificial e <span>RAG</span></h3>
-                <p>Desenvolvimento de arquiteturas de Geração Aumentada de Recuperação (RAG) para leitura analítica, consulta e extração de insights de documentações complexas.</p>
-            </div>
-            <div class="competencia-item">
-                <h3>Engenharia de Dados e ETL com <span>Pentaho</span></h3>
-                <p>Modelagem e execução de pipelines de dados robustos (Extração, Transformação e Carga) integrando múltiplas fontes para armazéns SQL.</p>
             </div>
         </div>
     </section>
