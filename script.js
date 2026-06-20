@@ -5,7 +5,6 @@ const navMenu = document.getElementById('navMenu');
 menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     
-    // Altera o ícone dinamicamente entre barras e fechar (X)
     const icon = menuToggle.querySelector('i');
     if (navMenu.classList.contains('active')) {
         icon.className = 'fa-solid fa-xmark';
