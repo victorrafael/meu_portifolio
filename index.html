@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Victor Rafael</title>
-    <!-- Ícones do FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Arquivo CSS Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +12,7 @@
     <div class="bg-glow"></div>
 
     <header>
-        <div class="logo"><i class="fa-solid fa-terminal logo-icon"></i> VICTOR RAFAEL</div>
+        <div class="logo"><span class="logo-accent">&lt;&sol;&gt;</span> VICTOR RAFAEL</div>
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -29,35 +27,54 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>Portifólio de Análise de Dados</h1>
-        <p>Desenvolvimento de dashboards inteligentes, pipelines de dados robustos e soluções automatizadas para otimização de processos corporativos.</p>
+        <div class="hero-intro">
+            <h1>Portifólio de Análise de Dados</h1>
+            <p>Desenvolvimento de dashboards inteligentes, pipelines de dados robustos e soluções automatizadas para otimização de processos corporativos.</p>
+        </div>
         
-        <!-- Redes Sociais no Início -->
-        <div class="hero-socials">
-            <a href="https://linkedin.com/in/viictorrafael" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://wa.me/5585994100604" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:rvictor181@gmail.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+        <!-- Estrutura Lado a Lado Dividida em Colunas Iguais -->
+        <div class="hero-split-container">
+            <!-- Coluna Esquerda: Habilidades Técnicas -->
+            <div class="hero-column flex-column-left">
+                <h2 class="column-title"><i class="fa-solid fa-code text-glow"></i> Tech Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-group primary-skills">
+                        <span class="skill-badge"><i class="fa-solid fa-chart-bar"></i> Power BI</span>
+                        <span class="skill-badge"><i class="fa-solid fa-filter"></i> DAX & Power Query</span>
+                        <span class="skill-badge"><i class="fa-solid fa-database"></i> SQL Avançado</span>
+                        <span class="skill-badge"><i class="fa-brands fa-python"></i> Python para Dados</span>
+                    </div>
+                    <div class="skills-group secondary-skills">
+                        <span class="skill-badge"><i class="fa-solid fa-diagram-project"></i> n8n Automation</span>
+                        <span class="skill-badge"><i class="fa-solid fa-brain"></i> RAG Systems</span>
+                        <span class="skill-badge"><i class="fa-solid fa-gears"></i> ETL Pentaho</span>
+                        <span class="skill-badge"><i class="fa-solid fa-file-excel"></i> Excel Avançado</span>
+                        <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> Modelagem de Dados</span>
+                        <span class="skill-badge"><i class="fa-solid fa-chart-line"></i> KPIs / Indicadores</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna Direita: Redes Sociais com Alto Destaque -->
+            <div class="hero-column flex-column-right">
+                <h2 class="column-title"><i class="fa-solid fa-share-nodes text-glow"></i> Minhas Redes</h2>
+                <div class="hero-socials-vertical">
+                    <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="hero-social-card linkedin-hero">
+                        <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/5585994100604" target="_blank" class="hero-social-card whatsapp-hero">
+                        <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:rvictor181@gmail.com" class="hero-social-card email-hero">
+                        <i class="fa-solid fa-envelope"></i> <span>E-mail Direto</span>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <!-- Bloco de Especialidades Expandido -->
-        <div class="skills-container">
-            <div class="skills-group primary-skills">
-                <span class="skill-badge"><i class="fa-solid fa-chart-bar"></i> Power BI</span>
-                <span class="skill-badge"><i class="fa-solid fa-filter"></i> DAX & Power Query</span>
-                <span class="skill-badge"><i class="fa-solid fa-database"></i> SQL Avançado</span>
-                <span class="skill-badge"><i class="fa-brands fa-python"></i> Python para Dados</span>
-            </div>
-            <div class="skills-group secondary-skills">
-                <span class="skill-badge"><i class="fa-solid fa-diagram-project"></i> n8n Automation</span>
-                <span class="skill-badge"><i class="fa-solid fa-brain"></i> RAG Systems</span>
-                <span class="skill-badge"><i class="fa-solid fa-gears"></i> ETL Pentaho</span>
-                <span class="skill-badge"><i class="fa-solid fa-file-excel"></i> Excel Avançado</span>
-                <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> Modelagem de Dados</span>
-                <span class="skill-badge"><i class="fa-solid fa-chart-line"></i> KPIs / Indicadores</span>
-            </div>
+        <div class="hero-action">
+            <a href="#projetos" class="btn">Explorar Projetos</a>
         </div>
-
-        <a href="#projetos" class="btn">Explorar Projetos</a>
     </section>
 
     <section id="projetos">
