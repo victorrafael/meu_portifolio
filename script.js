@@ -13,7 +13,6 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
-/* Fecha o menu cascata automaticamente ao clicar em um link */
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
         if (navMenu.classList.contains('active')) {
