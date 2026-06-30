@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Victor Rafael</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon para os ícones originais de SQL, Python e Power BI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,9 +57,18 @@
                 </div>
             </div>
 
-            <!-- Coluna Direita: Redes Sociais com Alto Destaque -->
-            <div class="hero-column flex-column-right">
-                <h2 class="column-title"><i class="fa-solid fa-share-nodes text-glow"></i> Minhas Redes</h2>
+            <!-- Coluna Direita: Apresentação Pessoal, Redes e Stacks -->
+            <div class="hero-column flex-column-right presentation-column">
+                <!-- Bloco do Perfil com Foto -->
+                <div class="profile-block">
+                    <div class="avatar-wrapper">
+                        <img src="images/perfil.jpg" alt="Victor Rafael" class="profile-avatar">
+                    </div>
+                    <h2>Victor Rafael</h2>
+                    <h3>Analista de Dados</h3>
+                </div>
+
+                <h2 class="column-title mt-4"><i class="fa-solid fa-share-nodes text-glow"></i> Minhas Redes</h2>
                 <div class="hero-socials-vertical">
                     <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="hero-social-card linkedin-hero">
                         <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
@@ -66,8 +77,18 @@
                         <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
                     </a>
                     <a href="mailto:rvictor181@gmail.com" class="hero-social-card email-hero">
-                        <i class="fa-solid fa-envelope"></i> <span>E-mail</span>
+                        <i class="fa-solid fa-envelope"></i> <span>E-mail Direto</span>
                     </a>
+                </div>
+
+                <!-- Nova Seção Dinâmica: Stacks Através de Ícones Puros -->
+                <h2 class="column-title mt-4"><i class="fa-solid fa-layer-group text-glow"></i> Core Stacks</h2>
+                <div class="stacks-icons-grid">
+                    <div class="stack-icon-item" title="SQL"><i class="devicon-azuresqldatabase-plain"></i></div>
+                    <div class="stack-icon-item" title="Python"><i class="devicon-python-plain"></i></div>
+                    <div class="stack-icon-item" title="Power BI"><i class="devicon-powerbi-plain"></i></div>
+                    <div class="stack-icon-item" title="Pentaho"><i class="fa-solid fa-shuttle-space"></i></div>
+                    <div class="stack-icon-item" title="Inteligência Artificial"><i class="fa-solid fa-brain"></i></div>
                 </div>
             </div>
         </div>
