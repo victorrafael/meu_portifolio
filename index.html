@@ -27,7 +27,9 @@
     </header>
 
     <section id="home" class="hero py-4">
+        <!-- Bloco Principal de Apresentação Centralizado Ocupando Largura Total -->
         <div class="main-presentation-card">
+            <!-- Informações do Perfil -->
             <div class="profile-block">
                 <div class="avatar-wrapper">
                     <img src="VICTOR.jpg" alt="Victor Rafael" class="profile-avatar">
@@ -36,18 +38,20 @@
                 <h3>Analista de Dados</h3>
             </div>
 
+            <!-- Links Rápidos de Redes Sociais Integrados -->
             <div class="hero-socials-horizontal">
-                <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="hero-social-badge linkedin-hero">
+                <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="hero-social-badge linkedin-hero" title="LinkedIn">
                     <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
                 </a>
-                <a href="https://wa.me/5585994100604" target="_blank" class="hero-social-badge whatsapp-hero">
+                <a href="https://wa.me/5585994100604" target="_blank" class="hero-social-badge whatsapp-hero" title="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
                 </a>
-                <a href="mailto:rvictor181@gmail.com" class="hero-social-badge email-hero">
+                <a href="mailto:rvictor181@gmail.com" class="hero-social-badge email-hero" title="E-mail">
                     <i class="fa-solid fa-envelope"></i> <span>E-mail Direto</span>
                 </a>
             </div>
 
+            <!-- Grade de Imagens das Core Stacks Técnicas com Legenda -->
             <div class="stacks-section">
                 <span class="stacks-title"><i class="fa-solid fa-layer-group text-glow"></i> Core Stacks</span>
                 <div class="stacks-images-grid">
@@ -85,6 +89,7 @@
             </div>
         </div>
 
+        <!-- Linha Contínua de Tech Skills Abaixo da Apresentação Principal -->
         <div class="skills-line-wrapper">
             <span class="skills-line-title"><i class="fa-solid fa-code text-glow"></i> Tech Skills:</span>
             <div class="skills-inline-row">
@@ -106,25 +111,29 @@
         </div>
     </section>
 
-    <!-- Nova Estrutura Interativa: Projetos de BI com Mockups Reais -->
+    <!-- Seção de Projetos de BI com Mockups Reais e Descrição Lateral -->
     <section id="projetos">
         <h2 class="section-title">Projetos de Business Intelligence</h2>
         
         <div class="bi-hub-container">
-            <!-- Painel Setorial de Controle -->
-            <div class="bi-hub-controls">
-                <button class="hub-btn active" onclick="changeLiveDashboard('LINK_DATASET_1_DESKTOP', 'LINK_DATASET_1_MOBILE')">
-                    <i class="fa-solid fa-chart-line"></i> Performance de Vendas
-                </button>
-                <button class="hub-btn" onclick="changeLiveDashboard('LINK_DATASET_2_DESKTOP', 'LINK_DATASET_2_MOBILE')">
-                    <i class="fa-solid fa-wallet"></i> Visão Geral Financeira
-                </button>
-                <button class="hub-btn" onclick="changeLiveDashboard('LINK_DATASET_3_DESKTOP', 'LINK_DATASET_3_MOBILE')">
-                    <i class="fa-solid fa-bullseye"></i> Visão Geral Marketing
-                </button>
+            <!-- Coluna da Esquerda: Apresentação Textual do Painel Ativo -->
+            <div class="bi-project-presentation">
+                <span class="card-tag">Logística & Analytics</span>
+                <h3 id="projectLiveTitle">Dashboard LogiExpress Operational</h3>
+                <p id="projectLiveDesc">Análise de performance de cadeia logística de entregas rápida. O painel centraliza indicadores estratégicos como total de pedidos e entregas efetuadas, taxa percentual de eficiência por região, ranking de origens de canais integrados (E-commerce e Marketplaces) e avaliação de performance de entregadores por base regional.</p>
+                
+                <!-- Alternador Setorial de Relatórios -->
+                <div class="bi-hub-controls">
+                    <button class="hub-btn active" onclick="changeLiveDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'Dashboard LogiExpress Operational', 'Análise de performance de cadeia logística de entregas rápida. O painel centraliza indicadores estratégicos como total de pedidos e entregas efetuadas, taxa percentual de eficiência por região, ranking de origens de canais integrados (E-commerce e Marketplaces) e avaliação de performance de entregadores por base regional.')">
+                        <i class="fa-solid fa-truck-ramp-box"></i> Logística LogiExpress
+                    </button>
+                    <button class="hub-btn" onclick="changeLiveDashboard('LINK_PAINEL_2_DESKTOP', 'LINK_PAINEL_2_MOBILE', 'Visão Geral Financeira', 'Análise consolidada do fluxo de caixa e balancete corporativo para gestão de créditos, débitos e verificação analítica de performance de filiais.')">
+                        <i class="fa-solid fa-wallet"></i> Visão Geral Financeira
+                    </button>
+                </div>
             </div>
 
-            <!-- Área de Mockups em Alta Resolução (Lado a Lado) -->
+            <!-- Coluna da Direita: Área de Mockups Conectada aos Iframes -->
             <div class="mockups-workspace">
                 <!-- Mockup Desktop Monitor -->
                 <div class="desktop-mockup-wrapper">
@@ -133,7 +142,7 @@
                             <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                         </div>
                         <div class="monitor-screen">
-                            <iframe id="desktopIframe" src="about:blank" allowFullScreen="true"></iframe>
+                            <iframe id="desktopIframe" src="https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9" allowFullScreen="true"></iframe>
                         </div>
                     </div>
                     <div class="monitor-stand"></div>
@@ -145,7 +154,7 @@
                     <div class="phone-frame">
                         <div class="phone-speaker"></div>
                         <div class="phone-screen">
-                            <iframe id="mobileIframe" src="about:blank" allowFullScreen="true"></iframe>
+                            <iframe id="mobileIframe" src="https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9" allowFullScreen="true"></iframe>
                         </div>
                         <div class="phone-home"></div>
                     </div>
