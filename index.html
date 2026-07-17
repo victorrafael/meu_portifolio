@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Victor Rafael</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Devicon para os ícones originais de SQL, Python e Power BI -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,9 +27,7 @@
     </header>
 
     <section id="home" class="hero py-4">
-        <!-- Bloco Principal de Apresentação Centralizado Ocupando Largura Total -->
         <div class="main-presentation-card">
-            <!-- Informações do Perfil -->
             <div class="profile-block">
                 <div class="avatar-wrapper">
                     <img src="VICTOR.jpg" alt="Victor Rafael" class="profile-avatar">
@@ -40,20 +36,18 @@
                 <h3>Analista de Dados</h3>
             </div>
 
-            <!-- Links Rápidos de Redes Sociais Integrados -->
             <div class="hero-socials-horizontal">
-                <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="hero-social-badge linkedin-hero" title="LinkedIn">
+                <a href="https://linkedin.com/in/viictorrafael" target="_blank" class="hero-social-badge linkedin-hero">
                     <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
                 </a>
-                <a href="https://wa.me/5585994100604" target="_blank" class="hero-social-badge whatsapp-hero" title="WhatsApp">
+                <a href="https://wa.me/5585994100604" target="_blank" class="hero-social-badge whatsapp-hero">
                     <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
                 </a>
-                <a href="mailto:rvictor181@gmail.com" class="hero-social-badge email-hero" title="E-mail">
+                <a href="mailto:rvictor181@gmail.com" class="hero-social-badge email-hero">
                     <i class="fa-solid fa-envelope"></i> <span>E-mail Direto</span>
                 </a>
             </div>
 
-            <!-- Grade de Imagens das Core Stacks Técnicas com Legenda -->
             <div class="stacks-section">
                 <span class="stacks-title"><i class="fa-solid fa-layer-group text-glow"></i> Core Stacks</span>
                 <div class="stacks-images-grid">
@@ -91,7 +85,6 @@
             </div>
         </div>
 
-        <!-- Linha Contínua de Tech Skills Abaixo da Apresentação Principal -->
         <div class="skills-line-wrapper">
             <span class="skills-line-title"><i class="fa-solid fa-code text-glow"></i> Tech Skills:</span>
             <div class="skills-inline-row">
@@ -109,44 +102,53 @@
         </div>
 
         <div class="hero-action mt-4">
-            <a href="#projetos" class="btn">Explorar Projetos</a>
+            <a href="#projetos" class="btn">Explorar Painéis</a>
         </div>
     </section>
 
+    <!-- Nova Estrutura Interativa: Projetos de BI com Mockups Reais -->
     <section id="projetos">
         <h2 class="section-title">Projetos de Business Intelligence</h2>
         
-        <div class="projects-list">
-            <div class="card horizontal-card">
-                <div class="card-img-wrapper">
-                    <img src="painel_1.PNG" alt="Vendas por Região e Período" class="card-img">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">BI & Analytics</span>
-                    <h3>Vendas por Região e Período</h3>
-                    <p>Análise interativa de indicadores comerciais englobando faturamento total, evolução anual e distribuição geográfica por estados e municípios através de árvore de decomposição inteligente.</p>
-                </div>
+        <div class="bi-hub-container">
+            <!-- Painel Setorial de Controle -->
+            <div class="bi-hub-controls">
+                <button class="hub-btn active" onclick="changeLiveDashboard('LINK_DATASET_1_DESKTOP', 'LINK_DATASET_1_MOBILE')">
+                    <i class="fa-solid fa-chart-line"></i> Performance de Vendas
+                </button>
+                <button class="hub-btn" onclick="changeLiveDashboard('LINK_DATASET_2_DESKTOP', 'LINK_DATASET_2_MOBILE')">
+                    <i class="fa-solid fa-wallet"></i> Visão Geral Financeira
+                </button>
+                <button class="hub-btn" onclick="changeLiveDashboard('LINK_DATASET_3_DESKTOP', 'LINK_DATASET_3_MOBILE')">
+                    <i class="fa-solid fa-bullseye"></i> Visão Geral Marketing
+                </button>
             </div>
 
-            <div class="card horizontal-card">
-                <div class="card-img-wrapper">
-                    <img src="painel_2.PNG" alt="Relatório Visão Geral Financeira" class="card-img">
+            <!-- Área de Mockups em Alta Resolução (Lado a Lado) -->
+            <div class="mockups-workspace">
+                <!-- Mockup Desktop Monitor -->
+                <div class="desktop-mockup-wrapper">
+                    <div class="monitor-frame">
+                        <div class="monitor-top-bar">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <div class="monitor-screen">
+                            <iframe id="desktopIframe" src="about:blank" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="monitor-stand"></div>
+                    <div class="monitor-base"></div>
                 </div>
-                <div class="card-content">
-                    <span class="card-tag">BI & Analytics</span>
-                    <h3>Visão Geral Financeira</h3>
-                    <p>Painel consolidado focado no balancete corporativo. Permite o rastreio rigoroso de créditos, débitos, contagem de lançamentos e distribuição analítica por plano de contas e filiais.</p>
-                </div>
-            </div>
 
-            <div class="card horizontal-card">
-                <div class="card-img-wrapper">
-                    <img src="painel_3.PNG" alt="Relatório Visão Geral Marketing" class="card-img">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">BI & Analytics</span>
-                    <h3>Visão Geral Marketing</h3>
-                    <p>Análise detalhada de performance de campanhas pagas e orgânicas, medindo a relação Custo x Receita ao longo do tempo, métricas de ROAS, volume de leads qualificados e custo por clique (CPC).</p>
+                <!-- Mockup Mobile Smartphone -->
+                <div class="phone-mockup-wrapper">
+                    <div class="phone-frame">
+                        <div class="phone-speaker"></div>
+                        <div class="phone-screen">
+                            <iframe id="mobileIframe" src="about:blank" allowFullScreen="true"></iframe>
+                        </div>
+                        <div class="phone-home"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,7 +176,7 @@
                 <div class="card-content">
                     <span class="card-tag etl-tag">Data Engineering</span>
                     <h3>Engenharia de Dados com Pentaho</h3>
-                    <p>Modelagem e execução de pipelines de dados estruturados (Extração, Transformation e Carga) integrando múltiplas fontes descentralizadas para bancos relacionais SQL.</p>
+                    <p>Modelagem e execução de pipelines de dados estruturados (Extração, Transformação e Carga) integrando múltiplas fontes descentralizadas para bancos relacionais SQL.</p>
                 </div>
             </div>
 
