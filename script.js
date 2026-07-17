@@ -1,24 +1,33 @@
-/* 1. Controle Avançado do Workspace de BI (Troca Coordenada de Links) */
-function changeLiveDashboard(desktopUrl, mobileUrl) {
+/* 1. Controle Avançado do Workspace de BI (Troca de Links, Títulos e Descrições) */
+function changeLiveDashboard(desktopUrl, mobileUrl, title, description) {
     const desktopIframe = document.getElementById('desktopIframe');
     const mobileIframe = document.getElementById('mobileIframe');
+    const projectTitle = document.getElementById('projectLiveTitle');
+    const projectDesc = document.getElementById('projectLiveDesc');
     
     if (desktopIframe) desktopIframe.src = desktopUrl;
     if (mobileIframe) mobileIframe.src = mobileUrl;
+    if (projectTitle) projectTitle.innerText = title;
+    if (projectDesc) projectDesc.innerText = description;
     
-    // Atualiza as classes ativas dos botões estruturais
     const buttons = document.querySelectorAll('.hub-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     
-    event.currentTarget.classList.add('active');
+    if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active');
+    }
 }
 
-// Inicializa o primeiro painel com links padrão ao carregar
+// Inicializa o primeiro painel com o link real fornecido ao carregar
 document.addEventListener('DOMContentLoaded', () => {
     const defaultBtn = document.querySelector('.hub-btn');
     if (defaultBtn) {
-        // Altere aqui dentro os links padrão iniciais do seu primeiro projeto
-        changeLiveDashboard('URL_DO_PAINEL_1_DESKTOP', 'URL_DO_PAINEL_1_MOBILE');
+        changeLiveDashboard(
+            'https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 
+            'https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9',
+            'Dashboard LogiExpress Operational',
+            'Análise de performance de cadeia logística de entregas rápida. O painel centraliza indicadores estratégicos como total de pedidos e entregas efetuadas, taxa percentual de eficiência por região, ranking de origens de canais integrados (E-commerce e Marketplaces) e avaliação de performance de entregadores por base regional.'
+        );
     }
 });
 
