@@ -1,12 +1,12 @@
-/* 1. Controle Avançado do Workspace de BI (Troca de Links, Títulos e Descrições) */
-function changeLiveDashboard(desktopUrl, mobileUrl, title, description) {
+/* 1. Controle de Visualização de BI (Apenas Desktop Iframe + Textos Inferiores) */
+function changeLiveDashboard(desktopUrl, tag, title, description) {
     const desktopIframe = document.getElementById('desktopIframe');
-    const mobileIframe = document.getElementById('mobileIframe');
+    const projectTag = document.getElementById('projectLiveTag');
     const projectTitle = document.getElementById('projectLiveTitle');
     const projectDesc = document.getElementById('projectLiveDesc');
     
     if (desktopIframe) desktopIframe.src = desktopUrl;
-    if (mobileIframe) mobileIframe.src = mobileUrl;
+    if (projectTag) projectTag.innerText = tag;
     if (projectTitle) projectTitle.innerText = title;
     if (projectDesc) projectDesc.innerText = description;
     
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (defaultBtn) {
         changeLiveDashboard(
             'https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 
-            'https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9',
+            'Logística & Analytics',
             'Dashboard LogiExpress Operational',
-            'Análise de performance de cadeia logística de entregas rápida. O painel centraliza indicadores estratégicos como total de pedidos e entregas efetuadas, taxa percentual de eficiência por região, ranking de origens de canais integrados (E-commerce e Marketplaces) e avaliação de performance de entregadores por base regional.'
+            'Análise de performance de cadeia logística de entregas rápida (referência image_8e289c.png). O painel centraliza indicadores estratégicos como total de pedidos (128.717) e entregas efetuadas (106.004), taxa percentual de eficiência por região (Média global de 82,35%), monitoramento de pedidos atrasados, ranking de origens de canais integrados (com destaque para Shopee e Shein) e avaliação analítica de eficiência de bases regionais e entregadores.'
         );
     }
 });
