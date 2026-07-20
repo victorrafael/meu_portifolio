@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio - Victor Rafael</title>
-    <!-- FontAwesome para ícones premium -->
+    <title>Portfólio - Victor Rafael</title>
+    <!-- Fonte Montserrat Importada do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Arquivo CSS Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Fundo animado com gradiente verde -->
+    <!-- Canvas para a Rede Animada em Segundo Plano -->
+    <canvas id="bg-canvas"></canvas>
     <div class="bg-glow"></div>
 
-    <!-- Cabeçalho de Navegação -->
+    <!-- Cabeçalho com Contêiner Centralizado Antiestiramento -->
     <header>
-        <div class="logo"><span class="logo-accent">&lt;&sol;&gt;</span> VICTOR RAFAEL</div>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav id="navMenu">
-            <a href="#home">Início</a>
-            <a href="#projetos">Projetos BI</a>
-            <a href="#automacao">Automação & IA</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#formacao">Formação</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <div class="header-container">
+            <div class="logo"><span class="logo-accent">&lt;&sol;&gt;</span> VICTOR RAFAEL</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="navMenu">
+                <a href="#home">Início</a>
+                <a href="#projetos">Projetos BI</a>
+                <a href="#automacao">Automação & IA</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#formacao">Formação</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Seção de Boas-vindas (Hero) -->
     <section id="home" class="hero py-4">
-        <!-- Bloco Principal de Apresentação Centralizado Ocupando Largura Total -->
+        <!-- Bloco Principal de Apresentação Centralizado -->
         <div class="main-presentation-card">
             <!-- Informações do Perfil -->
             <div class="profile-block">
@@ -94,7 +96,7 @@
             </div>
         </div>
 
-        <!-- Linha Contínua de Tech Skills Abaixo da Apresentação Principal -->
+        <!-- Linha Contínua de Tech Skills -->
         <div class="skills-line-wrapper">
             <span class="skills-line-title"><i class="fa-solid fa-code text-glow"></i> Tech Skills:</span>
             <div class="skills-inline-row">
@@ -116,47 +118,35 @@
         </div>
     </section>
 
-    <!-- Seção de Projetos de BI Atualizada: Visualização Desktop Única Expandida -->
+    <!-- Seção de Projetos de BI (Layout com Visualização Focada e Texto Abaixo) -->
     <section id="projetos">
         <h2 class="section-title">Projetos de Business Intelligence</h2>
         
         <div class="bi-hub-container">
-            <!-- Alternador Setorial de Relatórios Horizontal Superior -->
-            <div class="bi-hub-controls">
-                <button class="hub-btn active" onclick="changeLiveDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'Logística & Analytics', 'Dashboard LogiExpress Operational', 'Análise de performance de cadeia logística de entregas rápida (referência image_8e289c.png). O painel centraliza indicadores estratégicos como total de pedidos (128.717) e entregas efetuadas (106.004), taxa percentual de eficiência por região (Média global de 82,35%), monitoramento de pedidos atrasados, ranking de origens de canais integrados (com destaque para Shopee e Shein) e avaliação analítica de eficiência de bases regionais e entregadores.')">
-                    <i class="fa-solid fa-truck-ramp-box"></i> Logística LogiExpress
-                </button>
-                <button class="hub-btn" onclick="changeLiveDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'Financeiro & Planejamento', 'Visão Geral Financeira', 'Painel consolidado focado no acompanhamento de indicadores financeiros corporativos. Permite o rastreio dinamico de faturamento líquido, fluxos de receitas e despesas por filial, controle de lançamentos pendentes e controle orçamentário otimizado para suporte em tomadas de decisões financeiras estratégicas.')">
-                    <i class="fa-solid fa-wallet"></i> Visão Geral Financeira
-                </button>
-            </div>
-
-            <!-- Área de Mockup Desktop Exclusiva e Ampliada -->
-            <div class="mockups-workspace">
-                <div class="desktop-mockup-wrapper">
-                    <div class="monitor-frame">
-                        <div class="monitor-top-bar">
-                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                        </div>
-                        <div class="monitor-screen">
-                            <iframe id="desktopIframe" src="https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9" allowFullScreen="true"></iframe>
-                        </div>
+            <!-- Workspace do Mockup Desktop Expandido -->
+            <div class="desktop-mockup-wrapper">
+                <div class="monitor-frame">
+                    <div class="monitor-top-bar">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                     </div>
-                    <div class="monitor-stand"></div>
-                    <div class="monitor-base"></div>
+                    <div class="monitor-screen">
+                        <!-- Carregamento direto e responsivo do link fornecido -->
+                        <iframe id="desktopIframe" src="https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9" allowFullScreen="true"></iframe>
+                    </div>
                 </div>
+                <div class="monitor-stand"></div>
+                <div class="monitor-base"></div>
             </div>
 
-            <!-- Detalhes do Painel Ativo (Agora abaixo do painel) -->
+            <!-- Detalhes de Apresentação (Abaixo do Painel) -->
             <div class="bi-project-presentation">
-                <span class="card-tag" id="projectLiveTag">Logística & Analytics</span>
+                <span class="card-tag">Logística & Analytics</span>
                 <h3 id="projectLiveTitle">Dashboard LogiExpress Operational</h3>
-                <p id="projectLiveDesc">Análise de performance de cadeia logística de entregas rápida (referência image_8e289c.png). O painel centraliza indicadores estratégicos como total de pedidos (128.717) e entregas efetuadas (106.004), taxa percentual de eficiência por região (Média global de 82,35%), monitoramento de pedidos atrasados, ranking de origens de canais integrados (com destaque para Shopee e Shein) e avaliação analítica de eficiência de bases regionais e entregadores.</p>
+                <p id="projectLiveDesc">Análise de performance de cadeia logística de entregas rápida (referência image_8e289c.png). O painel centraliza indicadores estratégicos como total de pedidos (128.717) e entregas efetuadas (106.004), taxa percentual de eficiência por região (Média global de 82,35%), monitoramento de pedidos atrasados, ranking de origens de canais integrados (com destaque para Shopee e Shein) e avaliação de performance de entregadores por base regional.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Automação & IA -->
     <section id="automacao">
         <h2 class="section-title">Automação & Engenharia de Dados</h2>
         
@@ -196,7 +186,6 @@
         </div>
     </section>
 
-    <!-- Seção de Experiência Profissional -->
     <section id="experiencia">
         <h2 class="section-title">Experiência Profissional</h2>
         <div class="timeline">
@@ -206,7 +195,7 @@
                     <span class="timeline-date">Dez 2024 - Jun 2026</span>
                 </div>
                 <h4 class="timeline-company">CM Máquinas</h4>
-                <p class="timeline-text">Desenvolvimento e manutenção de dashboards analíticos em Power BI focados em KPIs comerciais e monitoramento de funil de vendas em tempo real. Identificação de padrões ocultos em processes de negócios e estruturação de soluções assistidas por IA para qualificação automatizada de bases de leads.</p>
+                <p class="timeline-text">Desenvolvimento e manutenção de dashboards analíticos em Power BI focados em KPIs comerciais e monitoramento de funil de vendas em tempo real. Identificação de padrões ocultos em processos de negócios e estruturação de soluções assistidas por IA para qualificação automatizada de bases de leads.</p>
             </div>
 
             <div class="timeline-item">
@@ -229,7 +218,6 @@
         </div>
     </section>
 
-    <!-- Seção de Formação -->
     <section id="formacao">
         <h2 class="section-title">Formação & Certificações</h2>
         <div class="education-grid">
@@ -265,7 +253,6 @@
         </div>
     </section>
 
-    <!-- Seção de Contato -->
     <section id="contato">
         <h2 class="section-title">Contato</h2>
         <div class="contact-container">
@@ -286,12 +273,10 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer>
         <p>&copy; Portfólio de Análise de Dados. Desenvolvido por Victor Rafael <i class="fa-solid fa-code footer-code-icon"></i></p>
     </footer>
 
-    <!-- Arquivo JavaScript Externo -->
     <script src="script.js"></script>
 </body>
 </html>
