@@ -27,26 +27,13 @@ color: var(--text-color);
 overflow-x: hidden;
 }
 
-/* Canvas para Arte de Fundo de Redes em Movimento */
-#bg-canvas {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-z-index: -2;
-pointer-events: none;
-background: #020508;
-}
-
-/* Fundo Animado Base */
+/* Fundo Estático e Altamente Elegante */
 .bg-glow {
 position: fixed;
 top: 0;
 left: 0;
 width: 100vw;
 height: 100vh;
-background-size: 300% 300%;
 z-index: -1;
 pointer-events: none;
 }
@@ -139,9 +126,9 @@ font-size: 1.5rem;
 cursor: pointer;
 }
 
-/* Seções com Espaçamento Vertical Otimizado /
+/* Seções com Espaçamento Vertical Confortável (Restaurado) */
 section {
-padding: 5rem 10% 3rem 10%; / Espaço vertical reduzido */
+padding: 5rem 10% 3rem 10%;
 min-height: auto;
 display: flex;
 flex-direction: column;
@@ -167,7 +154,7 @@ flex-direction: column;
 justify-content: center;
 }
 
-/* Bloco Unificado de Apresentação Maior /
+/* Bloco Unificado de Apresentação Maior */
 .main-presentation-card {
 width: 100%;
 max-width: 850px;
@@ -179,7 +166,7 @@ box-shadow: var(--card-shadow);
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-bottom: 2.5rem; / Ajustado */
+margin-bottom: 2.5rem;
 }
 
 .text-glow {
@@ -422,75 +409,79 @@ display: flex;
 flex-direction: column;
 gap: 2rem;
 width: 100%;
-max-width: 1000px; / Largura para focar na melhor proporção */
+max-width: 950px; / Largura reduzida para focar na melhor proporção */
 margin: 0 auto;
 align-items: center;
 }
 
 /* Workspace do Mockup Desktop Expandido */
-.desktop-mockup-wrapper {
+.browser-mockup-wrapper {
 width: 100%;
+}
+
+.browser-frame {
+width: 100%;
+background: #111b24;
+border: 1px solid rgba(0, 255, 135, 0.15);
+border-radius: 8px;
+box-shadow: var(--card-shadow), 0 0 30px rgba(0, 255, 135, 0.1);
+overflow: hidden;
 display: flex;
 flex-direction: column;
-align-items: center;
 }
 
-.monitor-frame {
-width: 100%;
-aspect-ratio: 16 / 9;
-background: #000000;
-border: 12px solid #16222d;
-border-radius: 12px 12px 0 0;
-position: relative;
-box-shadow: var(--card-shadow), 0 0 30px rgba(0, 255, 135, 0.15);
-border-bottom: none;
-}
-
-.monitor-top-bar {
-position: absolute;
-top: -8px;
-left: 10px;
+.browser-header {
+background: #16222d;
+padding: 0.6rem 1rem;
 display: flex;
-gap: 4px;
+align-items: center;
+gap: 0.6rem;
+border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.monitor-top-bar .dot {
-width: 5px;
-height: 5px;
+.browser-header .dot {
+width: 8px;
+height: 8px;
 border-radius: 50%;
+display: inline-block;
 }
 
 .dot.red { background: #ff5f56; }
 .dot.yellow { background: #ffbd2e; }
 .dot.green { background: #27c93f; }
 
-.monitor-screen {
+.browser-address-bar {
+background: rgba(3, 7, 10, 0.6);
+color: var(--text-muted);
+font-size: 0.72rem;
+padding: 0.2rem 1.5rem;
+border-radius: 4px;
+font-family: monospace;
+flex: 1;
+max-width: 300px;
+margin-left: 1rem;
+text-align: center;
+}
+
+.browser-content {
 width: 100%;
-height: 100%;
-background: #04080c;
+aspect-ratio: 16 / 9; /* Mantém a proporção exata widescreen */
+background: #020406;
+display: flex;
+align-items: center;
+justify-content: center;
 overflow: hidden;
 }
 
-.monitor-screen iframe {
+.dashboard-preview-img {
 width: 100%;
 height: 100%;
-border: none;
+object-fit: cover;
+transition: transform 0.5s ease;
 }
 
-.monitor-stand {
-width: 120px;
-height: 45px;
-background: #111b24;
-border-left: 2px solid rgba(0, 255, 135, 0.15);
-border-right: 2px solid rgba(0, 255, 135, 0.15);
-}
-
-.monitor-base {
-width: 260px;
-height: 10px;
-background: #16222d;
-border-radius: 4px 4px 0 0;
-border-bottom: 2px solid var(--primary);
+.browser-frame:hover .dashboard-preview-img {
+transform: scale(1.02);
 }
 
 /* Detalhes de Apresentação (Abaixo do Painel) */
@@ -504,7 +495,6 @@ border: 1px solid rgba(0, 255, 135, 0.08);
 padding: 2.2rem;
 border-radius: 4px;
 box-shadow: var(--card-shadow);
-margin-top: 1rem;
 }
 
 .bi-project-presentation h3 {
@@ -519,13 +509,35 @@ letter-spacing: 0.5px;
 color: var(--text-muted);
 font-size: 0.95rem;
 line-height: 1.7;
-margin-bottom: 0;
+margin-bottom: 2rem;
 }
 
-/* Outras Seções /
+.bi-presentation-action {
+display: flex;
+justify-content: flex-start;
+}
+
+.btn-pbi-service {
+background: var(--primary);
+color: var(--bg-color);
+border: none;
+box-shadow: 0 0 20px var(--green-bloom);
+display: inline-flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+.btn-pbi-service:hover {
+background: #ffffff;
+color: var(--bg-color);
+box-shadow: 0 0 30px rgba(255,255,255,0.4);
+transform: translateY(-2px);
+}
+
+/* Outras Seções */
 .section-title {
 font-size: 2rem;
-margin-bottom: 2.5rem; / Ajustado */
+margin-bottom: 3rem;
 position: relative;
 display: inline-block;
 }
@@ -806,7 +818,7 @@ margin-left: 0.3rem;
 }
 
 /* ==========================================================================
-RESPONSIVIDADE COMPLETA ADAPTADA
+RESPONSIVIDADE COMPLETA ADAPTADA (RESTAURADA E LIMPA)
 ========================================================================== */
 @media (max-width: 1200px) {
 header { padding: 1.2rem 5%; }
@@ -845,6 +857,7 @@ nav {
 
 nav.active {
     display: flex;
+    background: rgba(4, 10, 14, 0.98);
     animation: slideDown 0.3s ease forwards;
 }
 
