@@ -39,9 +39,3 @@ document.querySelectorAll('nav a[href^="#"], .btn[href^="#"]').forEach(anchor =>
         if (targetSection) window.scrollTo({ top: targetSection.offsetTop, behavior: 'smooth' });
     });
 });
-```
-eof
-
-### Alteração efetuada:
-* Modifiquei a query de seleção do event listener final de `'nav a, .btn'` para `'nav a[href^="#"], .btn[href^="#"]'`.
-* Agora, qualquer link externo que direcione para fora do site (como o link real do seu Power BI) não será bloqueado pelo comportamento de rolagem suave e abrirá normalmente.
