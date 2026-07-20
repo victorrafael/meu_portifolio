@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Victor Rafael</title>
+    <!-- FontAwesome para ícones premium -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Arquivo CSS Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Fundo animado com gradiente verde -->
     <div class="bg-glow"></div>
 
+    <!-- Cabeçalho de Navegação -->
     <header>
         <div class="logo"><span class="logo-accent">&lt;&sol;&gt;</span> VICTOR RAFAEL</div>
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -26,6 +30,7 @@
         </nav>
     </header>
 
+    <!-- Seção de Boas-vindas (Hero) -->
     <section id="home" class="hero py-4">
         <!-- Bloco Principal de Apresentação Centralizado Ocupando Largura Total -->
         <div class="main-presentation-card">
@@ -111,31 +116,23 @@
         </div>
     </section>
 
-    <!-- Seção de Projetos de BI com Mockups Reais e Descrição Lateral -->
+    <!-- Seção de Projetos de BI Atualizada: Visualização Desktop Única Expandida -->
     <section id="projetos">
         <h2 class="section-title">Projetos de Business Intelligence</h2>
         
         <div class="bi-hub-container">
-            <!-- Coluna da Esquerda: Apresentação Textual do Painel Ativo -->
-            <div class="bi-project-presentation">
-                <span class="card-tag">Logística & Analytics</span>
-                <h3 id="projectLiveTitle">Dashboard LogiExpress Operational</h3>
-                <p id="projectLiveDesc">Análise de performance de cadeia logística de entregas rápida. O painel centraliza indicadores estratégicos como total de pedidos e entregas efetuadas, taxa percentual de eficiência por região, ranking de origens de canais integrados (E-commerce e Marketplaces) e avaliação de performance de entregadores por base regional.</p>
-                
-                <!-- Alternador Setorial de Relatórios -->
-                <div class="bi-hub-controls">
-                    <button class="hub-btn active" onclick="changeLiveDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'Dashboard LogiExpress Operational', 'Análise de performance de cadeia logística de entregas rápida. O painel centraliza indicadores estratégicos como total de pedidos e entregas efetuadas, taxa percentual de eficiência por região, ranking de origens de canais integrados (E-commerce e Marketplaces) e avaliação de performance de entregadores por base regional.')">
-                        <i class="fa-solid fa-truck-ramp-box"></i> Logística LogiExpress
-                    </button>
-                    <button class="hub-btn" onclick="changeLiveDashboard('LINK_PAINEL_2_DESKTOP', 'LINK_PAINEL_2_MOBILE', 'Visão Geral Financeira', 'Análise consolidada do fluxo de caixa e balancete corporativo para gestão de créditos, débitos e verificação analítica de performance de filiais.')">
-                        <i class="fa-solid fa-wallet"></i> Visão Geral Financeira
-                    </button>
-                </div>
+            <!-- Alternador Setorial de Relatórios Horizontal Superior -->
+            <div class="bi-hub-controls">
+                <button class="hub-btn active" onclick="changeLiveDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'Logística & Analytics', 'Dashboard LogiExpress Operational', 'Análise de performance de cadeia logística de entregas rápida (referência image_8e289c.png). O painel centraliza indicadores estratégicos como total de pedidos (128.717) e entregas efetuadas (106.004), taxa percentual de eficiência por região (Média global de 82,35%), monitoramento de pedidos atrasados, ranking de origens de canais integrados (com destaque para Shopee e Shein) e avaliação analítica de eficiência de bases regionais e entregadores.')">
+                    <i class="fa-solid fa-truck-ramp-box"></i> Logística LogiExpress
+                </button>
+                <button class="hub-btn" onclick="changeLiveDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9', 'Financeiro & Planejamento', 'Visão Geral Financeira', 'Painel consolidado focado no acompanhamento de indicadores financeiros corporativos. Permite o rastreio dinamico de faturamento líquido, fluxos de receitas e despesas por filial, controle de lançamentos pendentes e controle orçamentário otimizado para suporte em tomadas de decisões financeiras estratégicas.')">
+                    <i class="fa-solid fa-wallet"></i> Visão Geral Financeira
+                </button>
             </div>
 
-            <!-- Coluna da Direita: Área de Mockups Conectada aos Iframes -->
+            <!-- Área de Mockup Desktop Exclusiva e Ampliada -->
             <div class="mockups-workspace">
-                <!-- Mockup Desktop Monitor -->
                 <div class="desktop-mockup-wrapper">
                     <div class="monitor-frame">
                         <div class="monitor-top-bar">
@@ -148,21 +145,18 @@
                     <div class="monitor-stand"></div>
                     <div class="monitor-base"></div>
                 </div>
+            </div>
 
-                <!-- Mockup Mobile Smartphone -->
-                <div class="phone-mockup-wrapper">
-                    <div class="phone-frame">
-                        <div class="phone-speaker"></div>
-                        <div class="phone-screen">
-                            <iframe id="mobileIframe" src="https://app.powerbi.com/view?r=eyJrIjoiZmY5ZTE1ZDMtZTIyNS00YTMzLWFjZjItZTkzNDY2N2EwYmUxIiwidCI6ImRhM2U3ZWE3LTUxMTctNDQwZS1hNzg2LWM1NDg1MjFlYTFjZSJ9" allowFullScreen="true"></iframe>
-                        </div>
-                        <div class="phone-home"></div>
-                    </div>
-                </div>
+            <!-- Detalhes do Painel Ativo (Agora abaixo do painel) -->
+            <div class="bi-project-presentation">
+                <span class="card-tag" id="projectLiveTag">Logística & Analytics</span>
+                <h3 id="projectLiveTitle">Dashboard LogiExpress Operational</h3>
+                <p id="projectLiveDesc">Análise de performance de cadeia logística de entregas rápida (referência image_8e289c.png). O painel centraliza indicadores estratégicos como total de pedidos (128.717) e entregas efetuadas (106.004), taxa percentual de eficiência por região (Média global de 82,35%), monitoramento de pedidos atrasados, ranking de origens de canais integrados (com destaque para Shopee e Shein) e avaliação analítica de eficiência de bases regionais e entregadores.</p>
             </div>
         </div>
     </section>
 
+    <!-- Seção de Automação & IA -->
     <section id="automacao">
         <h2 class="section-title">Automação & Engenharia de Dados</h2>
         
@@ -202,6 +196,7 @@
         </div>
     </section>
 
+    <!-- Seção de Experiência Profissional -->
     <section id="experiencia">
         <h2 class="section-title">Experiência Profissional</h2>
         <div class="timeline">
@@ -211,7 +206,7 @@
                     <span class="timeline-date">Dez 2024 - Jun 2026</span>
                 </div>
                 <h4 class="timeline-company">CM Máquinas</h4>
-                <p class="timeline-text">Desenvolvimento e manutenção de dashboards analíticos em Power BI focados em KPIs comerciais e monitoramento de funil de vendas em tempo real. Identificação de padrões ocultos em processos de negócios e estruturação de soluções assistidas por IA para qualificação automatizada de bases de leads.</p>
+                <p class="timeline-text">Desenvolvimento e manutenção de dashboards analíticos em Power BI focados em KPIs comerciais e monitoramento de funil de vendas em tempo real. Identificação de padrões ocultos em processes de negócios e estruturação de soluções assistidas por IA para qualificação automatizada de bases de leads.</p>
             </div>
 
             <div class="timeline-item">
@@ -234,6 +229,7 @@
         </div>
     </section>
 
+    <!-- Seção de Formação -->
     <section id="formacao">
         <h2 class="section-title">Formação & Certificações</h2>
         <div class="education-grid">
@@ -269,6 +265,7 @@
         </div>
     </section>
 
+    <!-- Seção de Contato -->
     <section id="contato">
         <h2 class="section-title">Contato</h2>
         <div class="contact-container">
@@ -289,10 +286,12 @@
         </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; Portfólio de Análise de Dados. Desenvolvido por Victor Rafael <i class="fa-solid fa-code footer-code-icon"></i></p>
     </footer>
 
+    <!-- Arquivo JavaScript Externo -->
     <script src="script.js"></script>
 </body>
 </html>
