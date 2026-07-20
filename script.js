@@ -31,10 +31,17 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(section => sectionObserver.observe(section));
 
-document.querySelectorAll('nav a, .btn').forEach(anchor => {
+// Seleciona apenas os links internos que começam com '#' para evitar quebrar links externos como o do Power BI
+document.querySelectorAll('nav a[href^="#"], .btn[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute('href'));
         if (targetSection) window.scrollTo({ top: targetSection.offsetTop, behavior: 'smooth' });
     });
 });
+```
+eof
+
+### Alteração efetuada:
+* Modifiquei a query de seleção do event listener final de `'nav a, .btn'` para `'nav a[href^="#"], .btn[href^="#"]'`.
+* Agora, qualquer link externo que direcione para fora do site (como o link real do seu Power BI) não será bloqueado pelo comportamento de rolagem suave e abrirá normalmente.
