@@ -1,4 +1,3 @@
-/* STREAMING_CHUNK: Definindo variáveis de ambiente e reset global... */
 :root {
 --bg-color: #03070a;
 --card-bg: #091118;
@@ -15,7 +14,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+font-family: 'Montserrat', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -28,18 +27,28 @@ color: var(--text-color);
 overflow-x: hidden;
 }
 
-/* STREAMING_CHUNK: Estilizando plano de fundo fluido e cabeçalho... /
-/ Fundo Animado com Gradiente Verde Destacado */
+/* Canvas para Arte de Fundo de Redes em Movimento */
+#bg-canvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: -2;
+pointer-events: none;
+background: #020508;
+}
+
+/* Fundo Animado Base */
 .bg-glow {
 position: fixed;
 top: 0;
 left: 0;
 width: 100vw;
 height: 100vh;
-background: linear-gradient(135deg, #020508 0%, #041a11 35%, #010f09 65%, #03070a 100%);
 background-size: 300% 300%;
 z-index: -1;
-animation: gradientFluid 10s ease infinite;
+pointer-events: none;
 }
 
 .bg-glow::before {
@@ -47,30 +56,31 @@ content: '';
 position: absolute;
 width: 100%;
 height: 100%;
-background: radial-gradient(circle at 20% 20%, rgba(0, 255, 135, 0.05) 0%, transparent 60%),
-radial-gradient(circle at 80% 80%, rgba(0, 179, 74, 0.05) 0%, transparent 60%);
+background: radial-gradient(circle at 20% 20%, rgba(0, 255, 135, 0.03) 0%, transparent 60%),
+radial-gradient(circle at 80% 80%, rgba(0, 179, 74, 0.03) 0%, transparent 60%);
 }
 
-@keyframes gradientFluid {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
-}
-
-/* Header / Navbar */
+/* Header / Navbar Centralizada e Responsiva */
 header {
 position: fixed;
 top: 0;
 width: 100%;
-padding: 1.2rem 10%;
-display: flex;
-justify-content: space-between;
-align-items: center;
 background: rgba(3, 7, 10, 0.95);
 backdrop-filter: blur(16px);
 z-index: 1000;
 border-bottom: 2px solid rgba(0, 255, 135, 0.2);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+padding: 1.2rem 0;
+}
+
+.header-container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .logo {
@@ -129,11 +139,10 @@ font-size: 1.5rem;
 cursor: pointer;
 }
 
-/* STREAMING_CHUNK: Estilizando sessões gerais e o Hero inicial... /
-/ Seções */
+/* Seções com Espaçamento Vertical Otimizado /
 section {
-padding: 9rem 10% 4rem 10%;
-min-height: 100vh;
+padding: 5rem 10% 3rem 10%; / Espaço vertical reduzido */
+min-height: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -150,7 +159,7 @@ transform: translateY(0);
 /* Hero Section */
 .hero {
 min-height: 100vh;
-padding-top: 8.5rem;
+padding-top: 7.5rem;
 align-items: center;
 text-align: center;
 display: flex;
@@ -158,19 +167,7 @@ flex-direction: column;
 justify-content: center;
 }
 
-.hero-intro {
-margin-bottom: 2rem;
-}
-
-.hero h1 {
-font-size: 3.5rem;
-margin-bottom: 1rem;
-font-weight: 800;
-letter-spacing: -1px;
-text-shadow: 0 0 25px rgba(0, 255, 135, 0.25);
-}
-
-/* Bloco Unificado de Apresentação Maior */
+/* Bloco Unificado de Apresentação Maior /
 .main-presentation-card {
 width: 100%;
 max-width: 850px;
@@ -182,7 +179,7 @@ box-shadow: var(--card-shadow);
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-bottom: 3.5rem;
+margin-bottom: 2.5rem; / Ajustado */
 }
 
 .text-glow {
@@ -235,8 +232,7 @@ text-transform: uppercase;
 letter-spacing: 1px;
 }
 
-/* STREAMING_CHUNK: Formatando redes sociais e stacks de tecnologia... /
-/ Redes Sociais Horizontais */
+/* Redes Sociais Horizontais */
 .hero-socials-horizontal {
 display: flex;
 gap: 1.5rem;
@@ -347,8 +343,7 @@ color: var(--primary);
 text-shadow: 0 0 5px var(--green-glow);
 }
 
-/* STREAMING_CHUNK: Desenvolvendo a linha horizontal compacta de habilidades... /
-/ Linha de Tech Skills Compacta */
+/* Linha de Tech Skills Compacta */
 .skills-line-wrapper {
 width: 100%;
 max-width: 1100px;
@@ -419,69 +414,22 @@ box-shadow: 0 0 30px var(--green-bloom);
 transform: translateY(-2px);
 }
 
-/* STREAMING_CHUNK: Refatorando o Hub de Projetos para formato Monitor Wide... /
-/ ==========================================================================
-NOVO LAYOUT DE PROJETOS DE BI (DESKTOP INTEGRADO + TEXTO INFERIOR)
-========================================================================== */
+/* ==========================================================================
+REFATORAÇÃO DE BI: APRESENTAÇÃO TEXTUAL ABAIXO DO PAINEL AMPLIADO
+========================================================================== /
 .bi-hub-container {
 display: flex;
 flex-direction: column;
 gap: 2rem;
 width: 100%;
-max-width: 1050px;
+max-width: 1000px; / Largura para focar na melhor proporção */
 margin: 0 auto;
-}
-
-/* Seletores de relatórios dispostos horizontalmente acima do painel */
-.bi-hub-controls {
-display: flex;
-justify-content: center;
-gap: 1.2rem;
-flex-wrap: wrap;
-width: 100%;
-margin-bottom: 0.5rem;
-}
-
-.hub-btn {
-background: var(--card-bg);
-color: #ffffff;
-border: 1px solid rgba(0, 255, 135, 0.15);
-padding: 0.85rem 1.8rem;
-border-radius: 4px;
-cursor: pointer;
-font-weight: 700;
-font-size: 0.9rem;
-display: flex;
 align-items: center;
-gap: 0.8rem;
-transition: all 0.3s ease;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.hub-btn i {
-color: var(--primary);
-}
-
-.hub-btn:hover, .hub-btn.active {
-border-color: var(--primary);
-box-shadow: 0 0 15px var(--green-glow);
-transform: translateY(-2px);
-}
-
-.hub-btn.active {
-background: rgba(0, 255, 135, 0.05);
 }
 
 /* Workspace do Mockup Desktop Expandido */
-.mockups-workspace {
-width: 100%;
-display: flex;
-justify-content: center;
-}
-
 .desktop-mockup-wrapper {
 width: 100%;
-max-width: 1000px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -494,7 +442,7 @@ background: #000000;
 border: 12px solid #16222d;
 border-radius: 12px 12px 0 0;
 position: relative;
-box-shadow: var(--card-shadow), 0 0 30px rgba(0, 255, 135, 0.1);
+box-shadow: var(--card-shadow), 0 0 30px rgba(0, 255, 135, 0.15);
 border-bottom: none;
 }
 
@@ -545,7 +493,7 @@ border-radius: 4px 4px 0 0;
 border-bottom: 2px solid var(--primary);
 }
 
-/* Detalhes de Apresentação (Agora abaixo do painel) */
+/* Detalhes de Apresentação (Abaixo do Painel) */
 .bi-project-presentation {
 width: 100%;
 text-align: left;
@@ -574,11 +522,10 @@ line-height: 1.7;
 margin-bottom: 0;
 }
 
-/* STREAMING_CHUNK: Estilizando as outras seções do site... /
-/ Outras Seções Gerais */
+/* Outras Seções /
 .section-title {
 font-size: 2rem;
-margin-bottom: 3rem;
+margin-bottom: 2.5rem; / Ajustado */
 position: relative;
 display: inline-block;
 }
@@ -729,8 +676,7 @@ font-size: 0.95rem;
 line-height: 1.6;
 }
 
-/* STREAMING_CHUNK: Estilizando a formação de rodapé e contato... /
-/ Formação */
+/* Formação */
 .education-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -873,9 +819,6 @@ section { padding: 7rem 5% 3rem 5%; }
 .hero h1 { font-size: 2.6rem; line-height: 1.2; }
 
 .skills-line-wrapper { flex-direction: column; align-items: flex-start; gap: 0.8rem; padding: 1.2rem; }
-.bi-hub-controls { gap: 0.8rem; }
-.hub-btn { padding: 0.75rem 1.4rem; font-size: 0.85rem; }
-
 .timeline-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
 
 
@@ -918,9 +861,6 @@ nav a::after { display: none; }
 .hero-socials-horizontal { gap: 0.8rem; }
 .hero-social-badge { width: 100%; justify-content: center; padding: 0.7rem; }
 .stacks-images-grid { gap: 1.2rem; }
-
-.bi-hub-controls { flex-direction: column; width: 100%; }
-.hub-btn { width: 100%; justify-content: center; }
 
 .timeline-item, .education-block { padding: 1.5rem; }
 .social-grid { flex-direction: column; width: 100%; }
