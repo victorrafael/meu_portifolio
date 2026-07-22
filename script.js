@@ -33,7 +33,7 @@ sections.forEach(section => sectionObserver.observe(section));
 
 // Seleciona apenas os links internos que começam com '#' para evitar quebrar links externos como o do Power BI
 document.querySelectorAll('nav a[href^="#"], .btn[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute('href'));
         if (targetSection) window.scrollTo({ top: targetSection.offsetTop, behavior: 'smooth' });
